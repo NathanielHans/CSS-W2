@@ -47,6 +47,19 @@ table {
 	border-spacing: 0;
 }
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
 
 /* */
 body{
@@ -80,20 +93,45 @@ body{
     background-color: rgb(255,255,255,0.1) ;
     color: #CED9BF;
     padding: 10px;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 .judul{
+    text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 50px;
+    padding-bottom: 10px;
 }
 .isi{
-    width: 400px;
-    padding: 10px;
+    width: 530px;
+    height: 176px;
+    padding: 20px 10px 10px 10px;
     text-align: left;
+    margin: 0 15px 0 20px;
     border: 3px solid #CED9BF;
+    float: left;
+    box-sizing: border-box;
 }
 .isi img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     float: left;
+}
+.isi2{
+    width: 530px;
+    height : 176px;
+    float: left;
+    margin: 0 15px 0 20px;
+    border: 3px solid #CED9BF;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.isi2 .contact{
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.isi2 a{
+    text-decoration: none;
+    color: #CED9BF;
 }
